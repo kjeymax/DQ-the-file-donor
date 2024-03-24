@@ -11,6 +11,17 @@ def is_enabled(value, default):
     else:
         return default
 
+API_ID = credentials["API_ID"]
+API_HASH = credentials["API_HASH"]
+BOT_TOKEN = credentials["BOT_TOKEN"]
+LOG_CHANNEL = credentials["LOG_CHANNEL"]
+INDEX_CHANNELS = credentials["INDEX_CHANNELS"]
+SUPPORT_GROUP = credentials["SUPPORT_GROUP"]
+AUTH_CHANNEL = credentials["AUTH_CHANNEL"]
+OPENAI_API = credentials["OPENAI_API"]
+DATABASE_URL = credentials["DATABASE_URL"]
+
+
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ['API_ID'])
