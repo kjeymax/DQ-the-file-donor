@@ -1,5 +1,6 @@
 import re
 from os import environ
+from uvloop import install
 from Script import script 
 
 id_pattern = re.compile(r'^.\d+$')
