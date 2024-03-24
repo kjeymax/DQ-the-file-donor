@@ -11,6 +11,10 @@ def is_enabled(value, default):
     else:
         return default
 
+# Read the dictionary from the txt file
+with open("/content/Auto-Filter-Bot/credentials.json", "r") as file:
+    credentials = json.loads(file.read())
+
 API_ID = credentials["API_ID"]
 API_HASH = credentials["API_HASH"]
 BOT_TOKEN = credentials["BOT_TOKEN"]
@@ -18,15 +22,13 @@ LOG_CHANNEL = credentials["LOG_CHANNEL"]
 INDEX_CHANNELS = credentials["INDEX_CHANNELS"]
 SUPPORT_GROUP = credentials["SUPPORT_GROUP"]
 AUTH_CHANNEL = credentials["AUTH_CHANNEL"]
-OPENAI_API = credentials["OPENAI_API"]
 DATABASE_URL = credentials["DATABASE_URL"]
+
 
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -54,7 +56,6 @@ NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'False')), False)
 
 # MongoDB information
 SECONDDB_URI = environ.get('SECONDDB_URI', None)
-DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Rajappan")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
