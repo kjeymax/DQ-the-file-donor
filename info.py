@@ -12,7 +12,7 @@ def is_enabled(value, default):
         return default
 
 # Read the dictionary from the txt file
-with open("/content/Auto-Filter-Bot/credentials.json", "r") as file:
+with open("//content/DQ-the-file-donor/credentials.json", "r") as file:
     credentials = json.loads(file.read())
 
 API_ID = credentials["API_ID"]
