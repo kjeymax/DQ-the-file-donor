@@ -14,7 +14,7 @@ def is_enabled(value, default):
         return default
 
 # Read the dictionary from the txt file
-with open("//content/DQ-the-file-donor/credentials.json", "r") as file:
+with open("/content/DQ-the-file-donor/credentials.json", "r") as file:
     credentials = json.loads(file.read())
 
 API_ID = credentials["API_ID"]
@@ -24,7 +24,7 @@ LOG_CHANNEL = credentials["LOG_CHANNEL"]
 INDEX_CHANNELS = credentials["INDEX_CHANNELS"]
 SUPPORT_GROUP = credentials["SUPPORT_GROUP"]
 AUTH_CHANNEL = credentials["AUTH_CHANNEL"]
-DATABASE_URL = credentials["DATABASE_URL"]
+DATABASE_URI = credentials["DATABASE_URI"]
 
 
 
